@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#E1BEE7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 320px;
+            margin: 20px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-info {
+            padding: 10px;
+        }
+
+        .video-info h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .video-info p {
+            color: #777;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
+            <img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg" alt="Thumbnail" class="thumbnail">
+        </a>
+        <div class="video-info">
+            <h3>Tiêu đề Video 1</h3>
+            <p>Mô tả ngắn về video 1</p>
+        </div>
+    </div>
+    <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
+            <img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg" alt="Thumbnail" class="thumbnail">
+        </a>
+        <div class="video-info">
+            <h3>Tiêu đề Video 2</h3>
+            <p>Mô tả ngắn về video 2</p>
+        </div>
+    </div>
+    <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">
+            <img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg" alt="Thumbnail" class="thumbnail">
+        </a>
+        <div class="video-info">
+            <h3>Tiêu đề Video 2</h3>
+            <p>Mô tả ngắn về video 2</p>
+        </div>
+    </div>
+    <!-- Thêm nhiều video-card tương tự -->
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So Sánh Khóa Học Toán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #E0F7FA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .link {
+            text-decoration: none;
+            color:white;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .course-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .course {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .course h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .course p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .course ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .course li {
+            background: #e0e0e0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .course button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .course button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .course-comparison {
+                flex-direction: column;
+            }
+
+            .course {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>So Sánh Khóa Học Toán</h1>
+        <div class="course-comparison">
+            <div class="course">
+                <h2>Toán Số</h2>
+                <p><strong>Giảng viên:</strong> Ai cũng được:)</p>
+                <p><strong>Thời lượng:</strong> Vô hạn</p>
+                <p><strong>Nội dung:</strong>Toán số</p>
+                <ul>
+                    <li>Số học cơ bản</li>
+                    <li>Đại số</li>
+                    <li>Lý thuyết số</li>
+                </ul>
+                <button onclick="registerCourse('Toán Số')"><a href="so.html" class="link">Đăng kí</a></button>
+            </div>
+            <div class="course">
+                <h2>Toán Hình</h2>
+                <p><strong>Giảng viên:</strong> Như bên kia</p>
+                <p><strong>Thời lượng:</strong>Vô hạn</p>
+                <p><strong>Nội dung:</strong>Toán hình</p>
+                <ul>
+                    <li>Hình học phẳng</li>
+                    <li>Hình học không gian</li>
+                    <li>Hình học tọa độ</li>
+                </ul>
+                <button onclick="registerCourse('Toán Hình')">
+                    <a href="hinh.html" class="link">Đăng Ký</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function registerCourse(courseName) {
+            alert('Bạn đã đăng ký thành công khóa học: ' + courseName);
+        }
+    </script>
+</body>
+</html>

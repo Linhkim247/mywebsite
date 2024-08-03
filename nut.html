@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nút CKey</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:end ;
+            margin: 0;
+            height: 100vh;
+        }
+       
+        a {
+            text-decoration: none;
+            color:black;
+        }
+        #ckey-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #56CCF2, #2F80ED);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thay thế giá trị box-shadow tại đây */
+            position: relative;
+            bottom: 0;
+            
+
+        }
+        #congrats {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+        #congrats button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="ckey-btn">CKey</button>
+
+    <div id="congrats">
+        <p>Chúc mừng! Bạn đã chọn đúng mã!</p>
+        <button id="close-congrats"><a href="game.html">Đóng</a></button>
+    </div>
+
+    <script>
+        const keys = ["Chúc bạn may mắn lần sau , ko cay nhé:)", "Sai rồi , thử lại nào!", "CanhDepTrai!","Vẫn sai rồi , thử lại nào!","Sai ","Bạn kém may mắn rồi","Nhìn gì nữa , ấn lại đi:)","Đã sai:)"];
+        const correctKey = "CanhDepTrai!"; // Mã đúng
+
+        document.getElementById('ckey-btn').addEventListener('click', function() {
+            const button = this;
+            button.disabled = true; // Vô hiệu hóa nút sau khi nhấn
+            let countdown = 30;
+
+            const countdownInterval = setInterval(() => {
+                button.innerText = `Đang xử lý... ${countdown}`;
+                countdown--;
+
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+                    button.innerText = ` ${randomKey}`; // Hiển thị mã ngẫu nhiên trong ô nút
+
+                    if (randomKey === correctKey) {
+                        document.getElementById('congrats').style.display = 'block';
+                    }
+
+                    button.disabled = false; // Bật lại nút
+                }
+            }, 1000); // Cập nhật mỗi giây
+        });
+
+        document.getElementById('close-congrats').addEventListener('click', function() {
+            document.getElementById('congrats').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sao chép nội dung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .copy-box {
+            padding: 15px;
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .copy-box:hover {
+            background-color: #d6d6d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Key:</h1>
+        <div class="copy-box" id="copyBox">DangCanhpro</div>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById('copyBox').addEventListener('click', function() {
+            // Tạo một element tạm thời để sao chép nội dung
+            const tempInput = document.createElement('input');
+            tempInput.value = this.textContent;
+            document.body.appendChild(tempInput);
+
+            // Chọn nội dung và sao chép
+            tempInput.select();
+            document.execCommand('copy');
+
+            // Xóa element tạm thời
+            document.body.removeChild(tempInput);
+
+            // Hiển thị thông báo sao chép thành công
+            const message = document.getElementById('message');
+            message.textContent = "Nội dung đã được sao chép!";
+            message.style.color = 'green';
+        });
+    </script>
+</body>
+</html>

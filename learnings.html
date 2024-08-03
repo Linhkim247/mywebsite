@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        body {
+             overflow: hidden;
+            background: #A0C4FF;
+            display: flex;
+            justify-content: center;
+            
+            margin: 0;
+           
+            
+            
+            
+        }
+        .bx {
+            color:rgb(57, 218, 221);
+        }
+
+        .profile-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-card p {
+            color: #777;
+            margin: 5px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img.jpg" alt="Profile Image">
+        <h2>Dang Quang Canh <i class='bx bxs-badge-check'></i></h2>
+        <p>Hoc sinh THPT NHC</p>
+        <p>MOMO: 0985461396</p>
+    </div>
+    <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            
+
+        }
+
+        .course-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            margin: 20px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+            
+            
+            
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+
+        .course-info {
+            padding: 10px;
+        }
+
+        .course-info h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .course-info p {
+            color: #777;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        /* btn */
+       
+        a {
+            text-decoration: none;
+            color:black;
+        }
+        #ckey-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #56CCF2, #2F80ED);
+            color: white;
+            align-items: end;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thay thế giá trị box-shadow tại đây */
+            position: relative;
+            top:683px;
+            left: -690px;
+            bottom: 0;
+            height: 45px;
+            width: 300px;
+            
+            
+        }
+        #congrats {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+        #congrats button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="course-card">
+        <a href="toan.html">
+            <img src="https://th.bing.com/th?id=OIP.7Q0bPfsLSdHLKGEaUGBScwHaKZ&w=211&h=296&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Toan" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>Toan</h3>
+            <p>Các video toán online của admin</p>
+        </div>
+    </div>
+    <div class="course-card">
+        <a href="anh.html">
+            <img src="https://th.bing.com/th/id/OIP.otqnPGNtQdElga2gRjkHOwHaKg?w=132&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="English" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>English</h3>
+            <p>Các video anh online của admin</p>
+        </div>
+    </div>
+    <div class="course-card">
+        <a href="van.html">
+            <img src="https://th.bing.com/th?id=OIP.Z3HLJm3v7gCtiXLKUODKHAHaKX&w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Van" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>Van</h3>
+            <p>Các video văn online của admin</p>
+        </div>
+    </div>
+    <div class="course-card">
+        <a href="li.html">
+            <img src="https://th.bing.com/th?id=OIP.3pSSWccQyZQEjcHzS5xCHgHaKZ&w=211&h=296&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Ly" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>Li</h3>
+            <p>Các video lí online của admin</p>
+        </div>
+    </div>
+    <div class="course-card">
+        <a href="hoa.html">
+            <img src="https://th.bing.com/th?id=OIP.XrBqaaXlrRDDHIVR2woP-gHaKT&w=211&h=294&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Hoa" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>Hoa</h3>
+            <p>Các video hóa online của admin</p>
+        </div>
+    </div>
+    <div class="course-card">
+        <a href="https://example.com/course6">
+            <img src="https://th.bing.com/th/id/OIP.LISFqMxGvYseuESXt-MK_wHaEK?w=329&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Khóa học 6" class="thumbnail">
+        </a>
+        <div class="course-info">
+            <h3>HTMl</h3>
+            <p>Chưa được hoàn thiện!!</p>
+        </div>
+    </div>
+    <button id="ckey-btn">CKey</button>
+
+    <div id="congrats">
+        <p>Chúc mừng! Bạn đã chọn đúng mã!</p>
+        <button id="close-congrats"><a href="game.html">Đóng</a></button>
+    </div>
+</body>
+</html>
+
+    
+    <script>
+        const createSnowflake = () => {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 10 + 5}s`; // Thời gian rơi ngẫu nhiên từ 5-15 giây
+            snowflake.style.opacity = Math.random();
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 15000); // Xóa tuyết sau khi rơi
+        };
+
+        setInterval(createSnowflake, 200); // Tạo tuyết mỗi 200ms
+        const keys = ["Chúc bạn may mắn lần sau , ko cay nhé:)", "Sai rồi , thử lại nào!", "CanhDepTrai!","Vẫn sai rồi , thử lại nào!","Sai ","Bạn kém may mắn rồi","Nhìn gì nữa , ấn lại đi:)","Đã sai:)"];
+        const correctKey = "CanhDepTrai!"; // Mã đúng
+
+        document.getElementById('ckey-btn').addEventListener('click', function() {
+            const button = this;
+            button.disabled = true; // Vô hiệu hóa nút sau khi nhấn
+            let countdown = 30;
+
+            const countdownInterval = setInterval(() => {
+                button.innerText = ` ${countdown}`;
+                countdown--;
+
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+                    button.innerText = ` ${randomKey}`; // Hiển thị mã ngẫu nhiên trong ô nút
+
+                    if (randomKey === correctKey) {
+                        document.getElementById('congrats').style.display = 'block';
+                    }
+
+                    button.disabled = false; // Bật lại nút
+                }
+            }, 1000); // Cập nhật mỗi giây
+        });
+
+        document.getElementById('close-congrats').addEventListener('click', function() {
+            document.getElementById('congrats').style.display = 'none';
+        });
+    </script>
+    <!-- <footer>
+        <button id="ckey-btn">CKey</button>
+    
+        <div id="congrats">
+            <p>Chúc mừng! Bạn đã chọn đúng mã!</p>
+            <button id="close-congrats"><a href="game.html">Đóng</a></button>
+        </div>
+    
+    </footer> -->
+</body>
+
+</html>
